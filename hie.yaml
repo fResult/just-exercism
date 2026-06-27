@@ -1,0 +1,14 @@
+cradle:
+  multi:
+    - path: "haskell/leap/src"
+      config:
+        cradle:
+          stack:
+            stackYaml: "haskell/leap/stack.yaml"
+            component: "leap:lib"
+    - path: "haskell/leap/test"
+      config:
+        cradle:
+          stack:
+            stackYaml: "haskell/leap/stack.yaml"
+            component: "leap:test:test"
