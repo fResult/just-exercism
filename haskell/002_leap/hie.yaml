@@ -1,6 +1,0 @@
-cradle:
-  stack:
-    - path: "./src"
-      component: "leap:lib"
-    - path: "./test"
-      component: "leap:test:test"

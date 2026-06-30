@@ -1,6 +1,0 @@
-cradle:
-  stack:
-    - path: "./src"
-      component: "reverse-string:lib"
-    - path: "./test"
-      component: "reverse-string:test:test"

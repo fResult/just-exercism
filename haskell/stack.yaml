@@ -1,0 +1,7 @@
+resolver: lts-22.44
+
+packages:
+  - 001_hello-world
+  - 002_leap
+  - 003_reverse-string
+  - 004_darts

@@ -1,4 +1,4 @@
-module LeapYear where
+module LeapYear (isLeapYear) where
 
 isLeapYear :: Integer -> Bool
 isLeapYear year

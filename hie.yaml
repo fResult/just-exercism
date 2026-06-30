@@ -1,14 +1,21 @@
 cradle:
-  multi:
-    - path: "haskell/leap/src"
-      config:
-        cradle:
-          stack:
-            stackYaml: "haskell/leap/stack.yaml"
-            component: "leap:lib"
-    - path: "haskell/leap/test"
-      config:
-        cradle:
-          stack:
-            stackYaml: "haskell/leap/stack.yaml"
-            component: "leap:test:test"
+  stack:
+    - path: "./001_hello-world/src"
+      component: "hello-world:lib"
+    - path: "./001_hello-world/test"
+      component: "hello-world:test:test"
+
+    - path: "./002_leap/src"
+      component: "leap:lib"
+    - path: "./002_leap/test"
+      component: "leap:test:test"
+
+    - path: "./003_reverse-string/src"
+      component: "reverse-string:lib"
+    - path: "./003_reverse-string/test"
+      component: "reverse-string:test:test"
+
+    - path: "./004_darts/src"
+      component: "darts:lib"
+    - path: "./004_darts/test"
+      component: "darts:test:test"
