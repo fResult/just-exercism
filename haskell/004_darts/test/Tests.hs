@@ -5,7 +5,7 @@ import Data.Foldable     (for_)
 import Test.Hspec        (Spec, describe, it, shouldBe)
 import Test.Hspec.Runner (configFailFast, defaultConfig, hspecWith)
 
-import Darts (scorste)
+import Darts (score)
 
 main :: IO ()
 main = hspecWith defaultConfig {configFailFast = True} specs
