@@ -1,21 +1,26 @@
 cradle:
   stack:
-    - path: "./001_hello-world/src"
+    - path: "001_hello-world/src"
       component: "hello-world:lib"
-    - path: "./001_hello-world/test"
+    - path: "001_hello-world/test"
       component: "hello-world:test:test"
 
-    - path: "./002_leap/src"
+    - path: "002_leap/src"
       component: "leap:lib"
-    - path: "./002_leap/test"
+    - path: "002_leap/test"
       component: "leap:test:test"
 
-    - path: "./003_reverse-string/src"
+    - path: "003_reverse-string/src"
       component: "reverse-string:lib"
-    - path: "./003_reverse-string/test"
+    - path: "003_reverse-string/test"
       component: "reverse-string:test:test"
 
-    - path: "./004_darts/src"
+    - path: "004_darts/src"
       component: "darts:lib"
-    - path: "./004_darts/test"
+    - path: "004_darts/test"
       component: "darts:test:test"
+
+    - path: 005_space-age/src
+      component: "space-age:lib"
+    - path: 005_space-age/test
+      component: "space-age:test:test"
