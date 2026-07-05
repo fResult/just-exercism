@@ -24,3 +24,8 @@ cradle:
       component: "space-age:lib"
     - path: 005_space-age/test
       component: "space-age:test:test"
+
+    - path: 006_pangram/src
+      component: "pangram:lib"
+    - path: 006_pangram/test
+      component: "pangram:test:test"

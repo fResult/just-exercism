@@ -6,3 +6,4 @@ packages:
   - 003_reverse-string
   - 004_darts
   - 005_space-age
+  - 006_pangram
