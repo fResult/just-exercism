@@ -29,3 +29,8 @@ cradle:
       component: "pangram:lib"
     - path: 006_pangram/test
       component: "pangram:test:test"
+
+    - path: 007_bob/src
+      component: "bob:lib"
+    - path: 007_bob/test
+      component: "bob:test:test"
