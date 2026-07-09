@@ -2,7 +2,7 @@
 
 module Bob (responseFor) where
 
-import Data.Char (isUpperCase)
+import Data.Char (isAlpha, isSpace, isUpperCase)
 import Data.Text (Text)
 import qualified Data.Text as T
 
@@ -18,22 +18,10 @@ isShoutingQuestion :: Text -> Bool
 isShoutingQuestion = (&&) <$> isQuestion <*> isShouting
 
 isQuestion :: Text -> Bool
-isQuestion = T.isSuffixOf "?" . T.filter notInSilences
-
--- endsWithSpace :: Text -> Bool
--- endsWithSpace = T.isSuffixOf " "
+isQuestion = T.isSuffixOf "?" . T.filter (not . isSpace)
 
 isShouting :: Text -> Bool
-isShouting = ((&&) <$> (\x -> T.length x > 0) <*> T.all isUpperCase) . T.filter inAlphs
+isShouting = ((&&) <$> (not . T.null) <*> T.all isUpperCase) . T.filter isAlpha
 
 isSilence :: Text -> Bool
-isSilence = noChar . T.filter notInSilences
-
-noChar :: Text -> Bool
-noChar text = T.length text <= 0
-
-notInSilences :: Char -> Bool
-notInSilences ch = ch `notElem` ("\n\r \t" :: String)
-
-inAlphs :: Char -> Bool
-inAlphs ch = ch `elem` ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" :: String)
+isSilence = T.all isSpace
