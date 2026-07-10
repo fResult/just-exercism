@@ -34,3 +34,8 @@ cradle:
       component: "bob:lib"
     - path: 007_bob/test
       component: "bob:test:test"
+
+    - path: 008_collatz-conjecture/src
+      component: "collatza-conjecture:lib"
+    - path: 008_collatz-conjecture/test
+      component: "collatz-conjecture:test:test"

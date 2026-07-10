@@ -1,0 +1,9 @@
+{
+  "track": "haskell",
+  "exercise": "008_collatz-conjecture",
+  "id": "2e8d4cc778b945caaba5107129b80857",
+  "url": "https://exercism.org/tracks/haskell/exercises/collatz-conjecture",
+  "handle": "fResult",
+  "is_requester": true,
+  "auto_approve": false
+}

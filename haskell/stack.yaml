@@ -8,3 +8,4 @@ packages:
   - 005_space-age
   - 006_pangram
   - 007_bob
+  - 008_collatz-conjecture
