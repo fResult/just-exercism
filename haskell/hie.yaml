@@ -39,3 +39,8 @@ cradle:
       component: "collatza-conjecture:lib"
     - path: 008_collatz-conjecture/test
       component: "collatz-conjecture:test:test"
+
+    - path: 009_rna-transcription/src
+      component: "rna-transcription:lib"
+    - path: 009_rna-transcription/test
+      component: "rna-transcription:test:test"
