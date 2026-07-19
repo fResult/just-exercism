@@ -1,24 +1,18 @@
 module DNA (toRNA) where
 
-toRNA :: String -> Either Char String
+type DNA = String
+type RNA = String
+type Nucleotide = Char
+
+toRNA :: DNA -> Either Nucleotide RNA
 toRNA ""     = Right ""
 toRNA (x:xs) = case complement x of
-  Just nucleotide -> (nucleotide :) <$> toRNA xs
-  Nothing         -> Left x
+  Left invalidNucleotide -> Left invalidNucleotide
+  Right validNucleotide  -> (validNucleotide :) <$> toRNA xs
 
-complement :: Char -> Maybe Char
-complement 'G' = Just 'C'
-complement 'C' = Just 'G'
-complement 'T' = Just 'A'
-complement 'A' = Just 'U'
-complement _   = Nothing
-
--- First try
--- toRNA :: String -> Either Char String
--- toRNA ""     = Right ""
--- toRNA (x:xs) = case x of
-  -- 'G'                -> ('C' :) <$> toRNA xs
-  -- 'C'                -> ('G' :) <$> toRNA xs
-  -- 'T'                -> ('A' :) <$> toRNA xs
-  -- 'A'                -> ('U' :) <$> toRNA xs
-  -- invalidNucleotides -> Left invalidNucleotides
+complement :: Nucleotide -> Either Nucleotide Nucleotide
+complement 'G'               = Right 'C'
+complement 'C'               = Right 'G'
+complement 'T'               = Right 'A'
+complement 'A'               = Right 'U'
+complement invalidNucleotide = Left invalidNucleotide
