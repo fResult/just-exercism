@@ -44,3 +44,8 @@ cradle:
       component: "rna-transcription:lib"
     - path: 009_rna-transcription/test
       component: "rna-transcription:test:test"
+
+    - path: 010_nucleotide-count/src
+      component: "nucleotide-count:lib"
+    - path: 010_nucleotide-counttest
+      component: "nucleotide-count:test:test"
