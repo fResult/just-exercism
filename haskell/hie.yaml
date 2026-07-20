@@ -47,5 +47,5 @@ cradle:
 
     - path: 010_nucleotide-count/src
       component: "nucleotide-count:lib"
-    - path: 010_nucleotide-counttest
+    - path: 010_nucleotide-count:test
       component: "nucleotide-count:test:test"
